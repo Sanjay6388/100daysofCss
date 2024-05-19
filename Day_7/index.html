@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7: Fading Animation</title>
+</head>
+<style>
+    *{
+        padding: 50px;
+    }
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        animation: fadeInOut 2s infinite;
+    }
+    @keyframes fadeInOut{
+        0%, 50% {opacity: 1;}
+        100% {opacity: 0;}
+    }
+</style>
+<body>
+    <div class="box"></div>
+</body>
