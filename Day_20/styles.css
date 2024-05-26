@@ -1,0 +1,68 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .sky {
+    width: 80%;
+    height: 60%;
+    margin: 100px;
+    background-color: #000;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .shooting-star {
+    width: 30px;
+    height: 5px;
+    border-radius: 80% 70% 60% 80%;
+    background: linear-gradient(90deg, rgb(82, 186, 235) 2%,
+    rgb(142, 198, 238) 29%, rgb(255, 255, 255) 60%);
+    position: absolute;
+    top: 50%;
+    animation: shootingStar linear infinite;
+  }
+  
+  @keyframes shootingStar {
+    0% {
+      transform: translateX(0) translateY(0) rotate(-45deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(120vw) translateY(-20vh) rotate(-45deg);
+      opacity: 0;
+    }
+  }
+  
+  .shooting-star:nth-child(1) {
+    top: 10%;
+    left: -20px;
+    animation-duration: 5s;
+  }
+  
+  .shooting-star:nth-child(2) {
+    top: 20%;
+    left: -20px;
+    animation-duration: 4s;
+  }
+  
+  .shooting-star:nth-child(3) {
+    top: 30%;
+    left: -20px;
+    animation-duration: 6s;
+  }
+  
+  .shooting-star:nth-child(4) {
+    top: 40%;
+    left: -20px;
+    animation-duration: 3s;
+  }
+  
+  .shooting-star:nth-child(5) {
+    top: 50%;
+    left: -20px;
+    animation-duration: 7s;
+  }
+  
