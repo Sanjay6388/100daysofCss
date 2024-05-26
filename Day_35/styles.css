@@ -1,0 +1,62 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  perspective: 800px;
+  /* Perspective for 3D effect */
+}
+
+.cylinder {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate-cylinder 10s linear infinite;
+}
+
+.stripes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.stripes:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(to right, #ff0000, #ff0000 10px, transparent 10px, transparent 20px);
+  animation: move-stripes 3s linear infinite;
+}
+
+@keyframes rotate-cylinder {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes move-stripes {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}

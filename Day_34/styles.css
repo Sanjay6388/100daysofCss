@@ -1,0 +1,35 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  perspective: 800px;
+  /* Perspective for 3D effect */
+}
+
+.sphere {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  background: radial-gradient(circle, #ff3366, #66ccff, #ffff66);
+  animation: rotate-sphere 10s linear infinite;
+}
+
+@keyframes rotate-sphere {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}

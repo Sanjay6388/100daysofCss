@@ -1,0 +1,30 @@
+body, html {
+    height: 100%;
+    margin: 0;
+ }
+  
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    perspective: 1000px;
+}
+  
+.rotating-text {
+    font-size: 48px;
+    font-family: Arial, sans-serif;
+    color: #0b0b0b;
+    animation: rotateText 5s infinite linear;
+    transform-origin: center;
+}
+  
+@keyframes rotateText {
+    0% {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+  

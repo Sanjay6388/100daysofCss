@@ -1,0 +1,33 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+  
+  .night-sky {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: relative;
+}
+  
+.nebula {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #ff5500, #ff0000, #5500ff, #0000ff);
+    background-size: 200% 200%;
+    animation: nebula-pulse 10s ease-in-out infinite;
+}
+  
+@keyframes nebula-pulse {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+}
+  
