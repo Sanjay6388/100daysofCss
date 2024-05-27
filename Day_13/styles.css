@@ -1,0 +1,48 @@
+body {
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .candle {
+    width: 20px;
+    height: 150px;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 50% 50% 5px 5px;
+    overflow: hidden;
+  }
+  .bottom{
+    position: absolute;
+    bottom: 100px;
+    width: 30px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 50% / 100%  100% 0 0;
+  }
+  .flame {
+    position: absolute;
+    bottom: 250px;
+    width: 30px;
+    height: 50px;
+    background-color: #ff9900;
+    border-radius: 60%;
+    transform-origin: bottom;
+    animation: flicker 0.1s infinite alternate;
+  }
+  
+  @keyframes flicker {
+    0% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(1.1) scaleX(1.05);
+    }
+    100% {
+      transform: scaleY(1) scaleX(1);
+    }
+  }
+  

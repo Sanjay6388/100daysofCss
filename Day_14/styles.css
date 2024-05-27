@@ -1,0 +1,62 @@
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+  
+.heart {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    transform: rotate(-45deg);
+    animation: flicker  1.5s infinite;
+}
+ 
+.heart::before,
+.heart::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    border-radius: 50%;
+}
+  
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+  
+.heart::after {
+    top: 0;
+    left: 50px;
+}
+  
+  
+@keyframes flicker {
+    0% {
+      opacity: 0;
+      scale: 0;
+    }
+    25% {
+      opacity: 0.5;
+      scale: 0.5;
+    }
+    50% {
+      opacity: 1;
+      scale: 1;
+    }
+    75% {
+      opacity: 0.5;
+      scale: 0.5;
+    }
+    100% {
+      opacity: 0;
+      scale: 0;
+    }
+}
+  
