@@ -1,0 +1,46 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.love-button {
+    font-size: 100px;
+    border: none;
+    color: #ffffff;
+    border-radius: 35px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.9s ease, box-shadow 0.3s ease;
+}
+
+
+.love-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #ffffff;
+    transition: transform 0.5s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.love-button:hover::before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.love-button:hover {
+    background-color: #000000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+

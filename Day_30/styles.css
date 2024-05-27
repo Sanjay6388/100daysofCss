@@ -1,0 +1,107 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.countdown {
+  position: relative;
+}
+
+.wheel {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 10px solid #3498db; /* Change color as needed */
+  position: relative;
+  overflow: hidden;
+}
+
+.hand {
+  width: 2px;
+  height: 100%;
+  background-color: #3498db; /* Change color as needed */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-origin: bottom center;
+  animation: countdown-animation 10s linear forwards;
+}
+
+.numbers {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.numbers span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3498db; /* Change color as needed */
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes countdown-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes number-animation {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.numbers span:nth-child(1) {
+  animation: number-animation 1s 9s forwards;
+}
+
+.numbers span:nth-child(2) {
+  animation: number-animation 1s 8s forwards;
+}
+.numbers span:nth-child(3) {
+  animation: number-animation 1s 7s forwards;
+}
+.numbers span:nth-child(4) {
+  animation: number-animation 1s 6s forwards;
+}
+.numbers span:nth-child(5) {
+  animation: number-animation 1s 5s forwards;
+}
+.numbers span:nth-child(6) {
+  animation: number-animation 1s 4s forwards;
+}
+.numbers span:nth-child(7) {
+  animation: number-animation 1s 3s forwards;
+}
+.numbers span:nth-child(8) {
+  animation: number-animation 1s 2s forwards;
+}
+.numbers span:nth-child(9) {
+  animation: number-animation 1s 1s forwards;
+}
+.numbers span:nth-child(10) {
+  animation: number-animation 1s 0s forwards;
+}
+

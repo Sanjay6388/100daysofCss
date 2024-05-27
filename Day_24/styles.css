@@ -1,0 +1,32 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+  
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+}
+  
+.typewriter-text {
+    font-size: 36px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333333;
+    overflow: hidden; 
+    white-space: nowrap;
+    border-right: 2px solid #333333; 
+    animation: typing 5s steps(40) forwards, blink-caret 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
