@@ -1,0 +1,36 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.moving-gradient {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(90deg, #ff6347, #ffa500, #32cd32, #1e90ff);
+    background-size: 200% 200%;
+    animation: gradient-move 10s linear infinite;
+}
+
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
+        /* Start position of the gradient */
+    }
+
+    100% {
+        background-position: 100% 50%;
+        /* End position of the gradient */
+    }
+}
+
+
+

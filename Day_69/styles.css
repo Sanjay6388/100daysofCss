@@ -1,0 +1,10 @@
+.box {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: #ff4d4d;
+    border-radius: 50%;
+    box-shadow: 5px 5px 20px;
+    transition: transform 0.5s ease;
+
+}
